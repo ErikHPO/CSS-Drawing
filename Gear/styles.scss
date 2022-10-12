@@ -1,0 +1,56 @@
+$primary-color: #5dc59d;
+$secondary-color: #306FD4;
+$background-color: black;
+
+@mixin align-centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}    
+
+body{
+    @include align-centered;
+    height: 100vh;
+    background-color: $background-color;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.gear{
+    width: 110px;
+    height: 110px;
+    background-color: $primary-color;
+    border-radius: 50%;
+}
+
+.gear-inner{
+    width: 55px;
+    height: 55px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.bar {
+    width: 170px;
+    height: 40px;
+    background-color: $primary-color;
+    border-radius: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &:nth-child(2){
+        transform: translate(-50%, -50%) rotate(60deg);
+    }
+    &:nth-child(3){
+        transform: translate(-50%, -50%) rotate(120deg);
+
+    }
+}
